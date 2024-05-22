@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use GreenField\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,9 +15,24 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        User::firstOrCreate(
+            ['email' => 'prince@xyruscode.com.ng'],
+            [
+                'first_name' => 'Xyrus',
+                'last_name' => 'Code',
+                'password' => Hash::make('demoPass'),
+                'role' => 'super-admin',
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'admin@greenfieldedu.com'],
+            [
+                'first_name' => 'Admin',
+                'last_name' => 'Regular',
+                'role' => 'admin',
+                'password' => Hash::make('demoPass'),
+            ]
+        );
     }
 }
