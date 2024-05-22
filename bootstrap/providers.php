@@ -1,5 +1,5 @@
 <?php
 
 return [
-    App\Providers\AppServiceProvider::class,
+    GreenField\Providers\AppServiceProvider::class,
 ];

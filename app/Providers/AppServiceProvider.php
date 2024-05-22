@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace GreenField\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

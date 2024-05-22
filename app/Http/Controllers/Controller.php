@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace GreenField\Http\Controllers;
 
 abstract class Controller
 {
